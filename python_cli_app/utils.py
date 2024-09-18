@@ -1,0 +1,3 @@
+def log_command():
+    
+    ...
