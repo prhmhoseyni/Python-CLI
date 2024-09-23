@@ -11,7 +11,6 @@ def main():
 
     # Parse command line arguments
     args = parser.parse_args()
-    print(args, sys.argv, " ".join(sys.argv))
 
     # Log command
     utils.log_command()
@@ -47,7 +46,9 @@ def main():
 
     elif args.mv:
 
-        ...
+        source, destination = args.mv
+
+        mv.run(source, destination)
 
     elif args.find:
 
