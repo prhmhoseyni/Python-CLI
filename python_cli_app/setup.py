@@ -1,4 +1,5 @@
 import argparse
+import os
 
 
 def setup_argparse():
@@ -8,7 +9,7 @@ def setup_argparse():
     parser.add_argument(
         "--ls",
         nargs="?",
-        const=".",
+        const=os.getcwd(),
         default=None,
         metavar=("PATH"),
         help="List files in the specified path."
