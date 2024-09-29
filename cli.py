@@ -11,15 +11,17 @@ def main():
 
     # Parse command line arguments
     args = parser.parse_args()
-    print(args, sys.argv, " ".join(sys.argv))
+    # print(args, sys.argv, " ".join(sys.argv))
 
     # Log command
     utils.log_command()
 
     # Run command
     if args.ls:
-
-        ...
+        
+        path = args.ls
+        
+        ls.run(path)
 
     elif args.cd:
 
