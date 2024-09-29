@@ -17,8 +17,10 @@ def main():
 
     # Run command
     if args.ls:
-
-        ...
+        
+        path = args.ls
+        
+        ls.run(path)
 
     elif args.cd:
 
