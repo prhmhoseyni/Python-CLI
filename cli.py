@@ -11,7 +11,6 @@ def main():
 
     # Parse command line arguments
     args = parser.parse_args()
-    print(args, sys.argv, " ".join(sys.argv))
 
     # Log command
     utils.log_command()
@@ -35,11 +34,9 @@ def main():
 
     elif args.rm:
 
-        ...
-
-    elif args.rm:
-
-        ...
+        path = args.rm
+        
+        rm.run(path, args.recursive)
 
     elif args.cp:
 
