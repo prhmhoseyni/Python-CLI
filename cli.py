@@ -36,11 +36,9 @@ def main():
 
     elif args.rm:
 
-        ...
-
-    elif args.rm:
-
-        ...
+        path = args.rm
+        
+        rm.run(path, args.recursive)
 
     elif args.cp:
 
