@@ -42,8 +42,9 @@ def main():
         ...
 
     elif args.cp:
+        path = args.cp
 
-        ...
+        cp.run(path)
 
     elif args.mv:
 
