@@ -23,8 +23,10 @@ def main():
         ls.run(path)
 
     elif args.cd:
-
-        ...
+    
+        path = args.cd
+        
+        cd.run(path)
 
     elif args.mkdir:
 
