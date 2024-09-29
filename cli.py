@@ -32,7 +32,9 @@ def main():
 
     elif args.rmdir:
 
-        ...
+        path = args.rmdir
+        
+        rmdir.run(path)
 
     elif args.rm:
 
