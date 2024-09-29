@@ -53,8 +53,11 @@ def main():
         mv.run(source, destination)
 
     elif args.find:
+        path = args.find
+        
+        find.run(path)
 
-        ...
+        
 
     elif args.cat:
 
