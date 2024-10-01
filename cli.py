@@ -62,8 +62,9 @@ def main():
         
 
     elif args.cat:
+        path = args.cat
 
-        ...
+        cat.run(path)
 
     else:
 
