@@ -27,8 +27,9 @@ def main():
         ...
 
     elif args.mkdir:
+        path = args.mkdir
 
-        ...
+        mkdir.run(path)
 
     elif args.rmdir:
 
