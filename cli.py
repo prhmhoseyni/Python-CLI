@@ -44,8 +44,9 @@ def main():
         rm.run(path, args.recursive)
 
     elif args.cp:
+        path = args.cp
 
-        ...
+        cp.run(path)
 
     elif args.mv:
 
