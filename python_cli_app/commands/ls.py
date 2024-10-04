@@ -4,8 +4,6 @@ from termcolor import colored
 
 def run(path):
 
-    print(colored(f"\n\"{path}\"\n", "blue"))
-
     for item in os.listdir(path):
 
         item_path = os.path.join(path, item)

@@ -5,6 +5,7 @@ from termcolor import colored
 def run(source, destination):
 
     try:
+        
         shutil.move(source, destination)
 
         print(colored(f"✅ Moved \"{source}\" to \"{destination}\"", "green"))
@@ -15,8 +16,7 @@ def run(source, destination):
 
     except PermissionError:
 
-        print(colored(f"❌ Permission denied when moving \"{
-              source}\" to \"{destination}\"", "red"))
+        print(colored(f"❌ Permission denied when moving \"{source}\" to \"{destination}\"", "red"))
 
     except Exception as error:
 

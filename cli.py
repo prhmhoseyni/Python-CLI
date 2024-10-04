@@ -13,42 +13,44 @@ def main():
     args = parser.parse_args()
 
     # Log command
-    utils.log_command()
+    utils.log_command(" ".join(sys.argv))
 
     # Run command
     if args.ls:
-        
+
         path = args.ls
-        
+
         ls.run(path)
 
     elif args.cd:
-    
+
         path = args.cd
-        
+
         cd.run(path)
 
     elif args.mkdir:
-        path = args.mkdir
 
-        mkdir.run(path)
+        source, dir_name = args.mkdir
+
+        mkdir.run(source, dir_name)
 
     elif args.rmdir:
 
         path = args.rmdir
-        
+
         rmdir.run(path)
 
     elif args.rm:
 
         path = args.rm
-        
+
         rm.run(path, args.recursive)
 
     elif args.cp:
-        path = args.cp
 
-        cp.run(path)
+        source, destination = args.cp
+
+        cp.run(source, destination)
 
     elif args.mv:
 
@@ -57,13 +59,13 @@ def main():
         mv.run(source, destination)
 
     elif args.find:
-        path = args.find
-        
-        find.run(path)
 
-        
+        path, pattern = args.find
+
+        find.run(path, pattern)
 
     elif args.cat:
+
         path = args.cat
 
         cat.run(path)

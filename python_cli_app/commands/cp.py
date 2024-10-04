@@ -1,10 +1,30 @@
 import shutil
 import os
-def run(src, distination):
-    if os.path.isfile(src):
-        shutil.copy(src,distination)
-    elif os.path.isdir(src):
-        shutil.copytree(src,distination)
-    else:
-        print(f'{src} is neither a file nor a directory')
+from termcolor import colored
 
+
+def run(source, destination):
+
+    if os.path.exists(source):
+
+        try:
+
+            if os.path.isfile(source):
+
+                shutil.copy(source, destination)
+
+                print(colored(f"✅ File copied \"{source}\" to \"{destination}\"", "green"))
+
+            elif os.path.isdir(source):
+
+                shutil.copytree(source, destination, dirs_exist_ok=True)
+
+                print(colored(f"✅ Directory copied \"{source}\" to \"{destination}\"", "green"))
+
+        except Exception as error:
+
+            print(colored(f"❌ Error copying \"{source}\" to \"{destination}\": {error}", "red"))
+
+    else:
+
+        print(colored(f"❌ \"{source}\" does not exist.", "red"))

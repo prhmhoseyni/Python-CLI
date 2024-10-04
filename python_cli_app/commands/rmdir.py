@@ -12,7 +12,7 @@ def run(source):
 
     except OSError as error:
 
-        if error.errno == 39:  # Check Directory Mot empty
+        if error.errno == 39:  # Check Directory Not Empty
 
             print(colored(f"❌ \"{source}\" is not empty.", "red"))
 
